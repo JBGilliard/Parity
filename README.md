@@ -1,10 +1,6 @@
 # Parity
 
-Backtesting engines disagree. Data vendors disagree on symbology and corporate actions. Live fills drift from the research book. Parity is the unification layer: one event ledger, explicit execution assumptions, and a first-break diff so a mismatch has a cause instead of a vibe.
-
-This repo is the early harness — golden micro-cases, a spec interpreter, vectorbt and LEAN adapters. It is not the v1 library (vendor adapters, four engine readers, futures stitching, `parity audit run.yaml`).
-
-`unexplained` is a valid result. Parity does not rank engines.
+Unification layer for disagreeing backtests.
 
 ## Install
 
