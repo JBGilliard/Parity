@@ -1,0 +1,39 @@
+{
+  "Orders": {
+    "1": {
+      "Id": 1,
+      "Symbol": {
+        "Value": "TEST",
+        "ID": "TEST"
+      },
+      "Time": "2024-01-02T14:30:00Z",
+      "LastFillTime": "2024-01-02T14:30:00Z",
+      "Quantity": 1.0,
+      "Price": 99.8,
+      "Status": 3,
+      "Type": 0,
+      "Tag": "parity-fixture"
+    },
+    "2": {
+      "Id": 2,
+      "Symbol": {
+        "Value": "TEST",
+        "ID": "TEST"
+      },
+      "Time": "2024-01-08T14:30:00Z",
+      "LastFillTime": "2024-01-08T14:30:00Z",
+      "Quantity": -1.0,
+      "Price": 101.8,
+      "Status": 3,
+      "Type": 0,
+      "Tag": "parity-fixture"
+    }
+  },
+  "Charts": {
+    "Strategy Equity": {
+      "Name": "Strategy Equity",
+      "Series": {}
+    }
+  },
+  "Statistics": {}
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "case_id": "lookahead-sentinel",
+  "title": "Same-bar close vs next-bar close cheat",
+  "isolated_variable": "lookahead",
+  "expected_first_divergence": "lookahead",
+  "execution": {
+    "fill_timing": "same_bar",
+    "fill_price": "close",
+    "fee": {
+      "mode": "per_share",
+      "value": "0.01",
+      "rounding": "half_even",
+      "decimals": 2
+    },
+    "cash": "reject",
+    "simultaneous_orders": "symbol_lexicographic",
+    "missing_bar": "skip",
+    "session": {
+      "timezone": "America/New_York",
+      "calendar": "XNYS",
+      "regular_hours_only": true
+    },
+    "adjustment": "raw",
+    "dividend": "cash",
+    "lookahead": "forbidden",
+    "fractional_shares": false
+  },
+  "instruments": [
+    "TEST"
+  ],
+  "mutated_execution": {
+    "fill_timing": "same_bar",
+    "fill_price": "close",
+    "fee": {
+      "mode": "per_share",
+      "value": "0.01",
+      "rounding": "half_even",
+      "decimals": 2
+    },
+    "cash": "reject",
+    "simultaneous_orders": "symbol_lexicographic",
+    "missing_bar": "skip",
+    "session": {
+      "timezone": "America/New_York",
+      "calendar": "XNYS",
+      "regular_hours_only": true
+    },
+    "adjustment": "raw",
+    "dividend": "cash",
+    "lookahead": "allowed",
+    "fractional_shares": false
+  },
+  "notes": ""
+}

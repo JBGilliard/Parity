@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "parity"
+version = "0.0.0"
+description = "Unification layer for disagreeing backtests: canonical ledgers and first-break attribution."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+authors = [{ name = "JB Gilliard" }]
+dependencies = [
+    "pydantic>=2.13,<3",
+    "polars>=1.43,<2",
+    "typer>=0.27,<1",
+]
+
+[project.scripts]
+parity = "parity.cli:app"
+
+[project.optional-dependencies]
+vectorbt = ["vectorbt==1.1.0"]
+lean-cli = ["lean==1.0.228"]
+backtrader = ["backtrader==1.9.78.123"]
+nautilus = ["nautilus_trader==1.231.0"]
+
+[dependency-groups]
+dev = [
+    "hypothesis>=6.165.10",
+    "pytest>=9.1",
+    "typer>=0.27.1",
+]
+vectorbt = ["vectorbt==1.1.0"]
+lean-cli = ["lean==1.0.228"]
+backtrader = ["backtrader==1.9.78.123"]
+nautilus = ["nautilus_trader==1.231.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv]
+package = true

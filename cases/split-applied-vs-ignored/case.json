@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "case_id": "split-applied-vs-ignored",
+  "title": "2-for-1 split applied vs omitted",
+  "isolated_variable": "corporate_action",
+  "expected_first_divergence": "corporate_action",
+  "execution": {
+    "fill_timing": "same_bar",
+    "fill_price": "open",
+    "fee": {
+      "mode": "per_share",
+      "value": "0.01",
+      "rounding": "half_even",
+      "decimals": 2
+    },
+    "cash": "reject",
+    "simultaneous_orders": "symbol_lexicographic",
+    "missing_bar": "skip",
+    "session": {
+      "timezone": "America/New_York",
+      "calendar": "XNYS",
+      "regular_hours_only": true
+    },
+    "adjustment": "raw",
+    "dividend": "cash",
+    "lookahead": "forbidden",
+    "fractional_shares": false
+  },
+  "instruments": [
+    "TEST"
+  ],
+  "mutated_execution": null,
+  "notes": ""
+}

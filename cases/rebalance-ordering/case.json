@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1.0",
+  "case_id": "rebalance-ordering",
+  "title": "Lexicographic vs native simultaneous-order policy",
+  "isolated_variable": "simultaneous_orders",
+  "expected_first_divergence": "unexplained",
+  "execution": {
+    "fill_timing": "same_bar",
+    "fill_price": "open",
+    "fee": {
+      "mode": "per_share",
+      "value": "0.01",
+      "rounding": "half_even",
+      "decimals": 2
+    },
+    "cash": "partial",
+    "simultaneous_orders": "symbol_lexicographic",
+    "missing_bar": "skip",
+    "session": {
+      "timezone": "America/New_York",
+      "calendar": "XNYS",
+      "regular_hours_only": true
+    },
+    "adjustment": "raw",
+    "dividend": "cash",
+    "lookahead": "forbidden",
+    "fractional_shares": false
+  },
+  "instruments": [
+    "AAA",
+    "ZZZ"
+  ],
+  "mutated_execution": {
+    "fill_timing": "same_bar",
+    "fill_price": "open",
+    "fee": {
+      "mode": "per_share",
+      "value": "0.01",
+      "rounding": "half_even",
+      "decimals": 2
+    },
+    "cash": "partial",
+    "simultaneous_orders": "engine_native",
+    "missing_bar": "skip",
+    "session": {
+      "timezone": "America/New_York",
+      "calendar": "XNYS",
+      "regular_hours_only": true
+    },
+    "adjustment": "raw",
+    "dividend": "cash",
+    "lookahead": "forbidden",
+    "fractional_shares": false
+  },
+  "notes": "No claimed category for fill ordering; unexplained is the correct result."
+}
